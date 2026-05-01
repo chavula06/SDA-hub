@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDA Hub Connect Zambia</title>
+    <meta name="description" content="SDA Hub Connect Zambia offers spiritual resources, sermons, prayer support, events, and community connection in Kawambwa.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="SDA Hub Logo" class="logo-img">
+                <h1>SDA Hub Connect Zambia</h1>
+            </div>
+            <nav class="nav" role="navigation" aria-label="Primary navigation">
+                <ul class="nav-list" id="navMenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sermons">Sermons</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#prayer">Prayer Wall</a></li>
+                    <li><a href="#donate">Donate</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="admin-dashboard/dashboard.html">Admin</a></li>
+                </ul>
+                <div class="nav-controls">
+                    <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">🌙</button>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open mobile menu" aria-expanded="false">☰</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 id="heroHeadline">Faith. Community. Growth.</h2>
+                    <p id="heroSubtext">Rooted in Scripture, serving in love, and creating a calm space for reflection, prayer, and fellowship across the SDA community in Kawambwa.</p>
+                    <div class="hero-buttons">
+                        <a href="#prayer" class="btn btn-primary">Join Prayer Wall</a>
+                        <a href="#sermons" class="btn btn-secondary">Listen to Latest Sermon</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/hero-church.svg" alt="Illustration of church community" class="hero-img" id="heroImage">
+                </div>
+            </div>
+        </section>
+
+        <section class="quick-access">
+            <div class="container">
+                <h2>Quick Access</h2>
+                <p class="section-intro">Discover the tools and ministries that help our community stay connected, worship, learn, and serve.</p>
+                <div class="cards-grid" id="quickAccessGrid"></div>
+            </div>
+        </section>
+
+        <section id="sermons" class="latest-sermons">
+            <div class="container">
+                <h2>Latest Sermons</h2>
+                <div class="audio-player-panel">
+                    <div class="audio-info">
+                        <p class="audio-label">Now Playing</p>
+                        <h3 id="audioTitle"></h3>
+                        <p id="audioSpeaker"></p>
+                    </div>
+                    <audio controls id="audioPlayer" preload="none"></audio>
+                </div>
+                <div class="sermons-grid" id="sermonsGrid"></div>
+            </div>
+        </section>
+
+        <section id="prayer" class="prayer-wall">
+            <div class="container">
+                <h2>Prayer Wall</h2>
+                <p>Share your prayer requests and pray for others in our community.</p>
+                <div class="prayer-requests" id="prayerRequestsGrid"></div>
+                <div class="prayer-form">
+                    <h3>Share Your Prayer Request</h3>
+                    <form>
+                        <input type="text" placeholder="Your Name (optional)" id="prayerName">
+                        <textarea placeholder="Your prayer request..." id="prayerText" required></textarea>
+                        <button type="submit" class="btn btn-primary">Submit Prayer Request</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="events" class="events">
+            <div class="container">
+                <h2>Upcoming Events</h2>
+                <div class="events-grid" id="eventsGrid"></div>
+            </div>
+        </section>
+
+        <section id="resources" class="resources">
+            <div class="container">
+                <h2>Resources</h2>
+                <p class="section-intro">Browse study tools, historical writings, hymns, and daily devotionals for spiritual growth.</p>
+                <div class="resources-grid" id="resourcesGrid"></div>
+            </div>
+        </section>
+
+        <section id="donate" class="donation">
+            <div class="container">
+                <h2>Support the Mission</h2>
+                <p class="section-intro">Give with confidence through local payment methods and help our church bring hope, care, and spiritual growth to the Kawambwa community.</p>
+                <div class="donation-methods">
+                    <div class="method">
+                        <h4>MTN Mobile Money</h4>
+                        <p id="donationMtn"></p>
+                    </div>
+                    <div class="method">
+                        <h4>Airtel Money</h4>
+                        <p id="donationAirtel"></p>
+                    </div>
+                    <div class="method">
+                        <h4>Bank Transfer</h4>
+                        <p><span id="bankName"></span><br>Account: <span id="bankAccount"></span></p>
+                    </div>
+                </div>
+                <a href="#contact" class="btn btn-primary large">Support the Mission</a>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p class="section-intro">Reach out to our church office for prayer support, event information, or to connect with our ministry teams.</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h4>Email</h4>
+                        <p><a href="#" id="contactEmail"></a></p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Phone</h4>
+                        <p><a href="#" id="contactPhone"></a></p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>WhatsApp</h4>
+                        <p><a href="#" id="contactWhatsapp"></a></p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Location</h4>
+                        <p id="contactLocation"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>    
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SDA Hub Connect Zambia</h3>
+                    <p>Connecting faith communities through digital resources and spiritual growth.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#sermons">Sermons</a></li>
+                        <li><a href="#resources">Resources</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#prayer">Prayer Wall</a></li>
+                        <li><a href="#donate">Donate</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘 Facebook</a>
+                        <a href="#" class="social-link">🐦 Twitter</a>
+                        <a href="#" class="social-link">📷 Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SDA Hub Connect Zambia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

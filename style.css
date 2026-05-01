@@ -1,0 +1,827 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #F8F5E8;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Header */
+.header {
+    background-color: #1F3A6F;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: #D4A53A;
+}
+
+.nav-controls {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.dark-mode-toggle,
+.mobile-menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.dark-mode-toggle:hover,
+.mobile-menu-toggle:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+    .nav-list {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #1F3A6F;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #1F3A6F 0%, #2A7F6E 100%);
+    color: white;
+    padding: 4rem 0;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    min-width: 160px;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: #D4A53A;
+    color: #1F3A6F;
+}
+
+.btn-primary:hover {
+    background-color: #c4992a;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-secondary:hover {
+    background-color: white;
+    color: #1F3A6F;
+}
+
+.hero-image {
+    text-align: center;
+}
+
+.hero-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Cards */
+.quick-access {
+    padding: 4rem 0;
+    background-color: #F8F5E8;
+}
+
+.quick-access h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #1F3A6F;
+    font-size: 2.5rem;
+}
+
+.section-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    color: #5f736e;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card-icon {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EEF2F1;
+    border-radius: 18px;
+}
+
+.card-icon img {
+    width: 36px;
+    height: 36px;
+}
+
+.card h3 {
+    color: #1F3A6F;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.card p {
+    color: #666;
+}
+
+/* Sermons */
+.latest-sermons {
+    padding: 4rem 0;
+    background-color: white;
+}
+
+.latest-sermons h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #1F3A6F;
+    font-size: 2.5rem;
+}
+
+.sermons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.sermon-card {
+    background: #F8F5E8;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.sermon-card:hover {
+    transform: translateY(-5px);
+}
+
+.sermon-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.sermon-content {
+    padding: 1.5rem;
+}
+
+.sermon-content h3 {
+    color: #1F3A6F;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.sermon-summary {
+    color: #4c5b54;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.sermon-speaker,
+.sermon-date {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.play-btn {
+    background-color: #2A7F6E;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.play-btn:hover {
+    background-color: #1e5f54;
+}
+
+.audio-player-panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    background-color: #EEF2F1;
+    padding: 1.8rem;
+    border-radius: 18px;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.audio-info {
+    max-width: 55%;
+}
+
+.audio-label {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.82rem;
+    margin-bottom: 0.5rem;
+    color: #2A7F6E;
+}
+
+.audio-player-panel h3 {
+    margin: 0 0 0.3rem;
+    font-size: 1.6rem;
+}
+
+.audio-player-panel p {
+    margin: 0;
+    color: #4c5b54;
+}
+
+.audio-player-panel audio {
+    width: 100%;
+    max-width: 340px;
+    border-radius: 16px;
+    outline: none;
+}
+
+/* Prayer Wall */
+.prayer-wall {
+    padding: 4rem 0;
+    background-color: #F8F5E8;
+}
+
+.prayer-wall h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #1F3A6F;
+    font-size: 2.5rem;
+}
+
+.prayer-wall > p {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.prayer-requests {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.prayer-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.prayer-card h4 {
+    color: #1F3A6F;
+    margin-bottom: 1rem;
+}
+
+.prayer-card p {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.pray-btn {
+    background-color: #2A7F6E;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.pray-btn:hover {
+    background-color: #1e5f54;
+}
+
+.prayer-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.prayer-form h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #1F3A6F;
+}
+
+.prayer-form input,
+.prayer-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+.prayer-form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+/* Events */
+.events {
+    padding: 4rem 0;
+    background-color: white;
+}
+
+.events h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #1F3A6F;
+    font-size: 2.5rem;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.event-card {
+    background: #F8F5E8;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.event-card h3 {
+    color: #1F3A6F;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.event-date,
+.event-location {
+    color: #2A7F6E;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.event-card p {
+    color: #666;
+}
+
+/* Resources */
+.resources {
+    padding: 4rem 0;
+    background-color: #F8F5E8;
+}
+
+.resources h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #1F3A6F;
+    font-size: 2.5rem;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.resource-category {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.resource-category h3 {
+    color: #1F3A6F;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.resource-category ul {
+    list-style: none;
+}
+
+.resource-category li {
+    margin-bottom: 0.5rem;
+}
+
+.resource-category a {
+    color: #2A7F6E;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.resource-category a:hover {
+    color: #1F3A6F;
+}
+
+/* Donation */
+.donation {
+    padding: 4rem 0;
+    background-color: white;
+    text-align: center;
+}
+
+.donation h2 {
+    margin-bottom: 1rem;
+    color: #1F3A6F;
+    font-size: 2.5rem;
+}
+
+.donation > p {
+    margin-bottom: 3rem;
+    color: #666;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.donation-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.method {
+    background: #F8F5E8;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.method h4 {
+    color: #1F3A6F;
+    margin-bottom: 1rem;
+}
+
+.method p {
+    color: #666;
+    line-height: 1.5;
+}
+
+.btn.large {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+}
+
+/* Contact */
+.contact {
+    padding: 4rem 0;
+    background-color: #F8F5E8;
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #1F3A6F;
+    font-size: 2.5rem;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.contact-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.contact-item h4 {
+    color: #1F3A6F;
+    margin-bottom: 1rem;
+}
+
+.contact-item p {
+    color: #666;
+}
+
+.contact-item a {
+    color: #2A7F6E;
+    text-decoration: none;
+}
+
+/* Footer */
+.footer {
+    background-color: #1F3A6F;
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.footer-section h4 {
+    margin-bottom: 1rem;
+    color: #D4A53A;
+}
+
+.footer-section p {
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.footer-section a:hover {
+    opacity: 1;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    padding: 8px 12px;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 1rem;
+    text-align: center;
+    opacity: 0.8;
+}
+
+/* Dark Mode */
+body.dark-mode .card,
+body.dark-mode .sermon-card,
+body.dark-mode .prayer-card,
+body.dark-mode .prayer-form,
+body.dark-mode .event-card,
+body.dark-mode .resource-category,
+body.dark-mode .method,
+body.dark-mode .contact-item {
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+}
+
+body.dark-mode .card h3,
+body.dark-mode .sermon-content h3,
+body.dark-mode .prayer-card h4,
+body.dark-mode .event-card h3,
+body.dark-mode .resource-category h3,
+body.dark-mode .method h4,
+body.dark-mode .contact-item h4,
+body.dark-mode .prayer-form h3 {
+    color: #D4A53A;
+}
+
+body.dark-mode .card p,
+body.dark-mode .sermon-speaker,
+body.dark-mode .sermon-date,
+body.dark-mode .prayer-card p,
+body.dark-mode .event-date,
+body.dark-mode .event-location,
+body.dark-mode .event-card p,
+body.dark-mode .method p,
+body.dark-mode .contact-item p {
+    color: #ccc;
+}
+
+body.dark-mode .resource-category a {
+    color: #D4A53A;
+}
+
+body.dark-mode .resource-category a:hover {
+    color: #f0f0f0;
+}
+
+body.dark-mode .contact-item a {
+    color: #D4A53A;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards-grid,
+    .sermons-grid,
+    .prayer-requests,
+    .events-grid,
+    .resources-grid,
+    .donation-methods,
+    .contact-info,
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-list {
+        gap: 1rem;
+    }
+
+    .footer-content {
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
