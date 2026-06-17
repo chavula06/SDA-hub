@@ -1,0 +1,9 @@
+<svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="240" height="240" rx="120" fill="#E8F1F5"/>
+  <circle cx="120" cy="90" r="42" fill="#D4A53A"/>
+  <path d="M57 196C57 166.176 85.176 138 115 138H125C154.824 138 183 166.176 183 196V205H57V196Z" fill="#1F3A6F"/>
+  <path d="M81 85C81 67.3269 95.3269 53 113 53H127C144.673 53 159 67.3269 159 85V95C159 112.673 144.673 127 127 127H113C95.3269 127 81 112.673 81 95V85Z" fill="#2A7F6E"/>
+  <circle cx="118" cy="89" r="18" fill="#F6D9A8"/>
+  <path d="M102 87C102 78.1634 109.163 71 118 71C126.837 71 134 78.1634 134 87V93H102V87Z" fill="#1F3A6F"/>
+  <text x="120" y="220" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="18" font-weight="600" fill="#1F3A6F">Ephraim</text>
+</svg>

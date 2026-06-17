@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - SDA Hub Connect Zambia</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <img src="images/logo.png" alt="SDA Hub Logo" class="sidebar-logo">
+                <h2>SDA Hub Connect Zambia</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#dashboard" class="nav-link active" data-page="dashboard">
+                    <span class="nav-icon">🏠</span>
+                    Dashboard
+                </a>
+                <a href="#upload-sermon" class="nav-link" data-page="upload-sermon">
+                    <span class="nav-icon">🎵</span>
+                    Upload Sermon
+                </a>
+                <a href="#manage-resources" class="nav-link" data-page="manage-resources">
+                    <span class="nav-icon">📚</span>
+                    Manage Resources
+                </a>
+                <a href="#prayer-wall" class="nav-link" data-page="prayer-wall">
+                    <span class="nav-icon">🙏</span>
+                    Prayer Wall
+                </a>
+                <a href="#events" class="nav-link" data-page="events">
+                    <span class="nav-icon">📅</span>
+                    Events
+                </a>
+                <a href="#gallery" class="nav-link" data-page="gallery">
+                    <span class="nav-icon">🖼️</span>
+                    Gallery
+                </a>
+                <a href="#donations" class="nav-link" data-page="donations">
+                    <span class="nav-icon">💝</span>
+                    Donations
+                </a>
+                <a href="#messages" class="nav-link" data-page="messages">
+                    <span class="nav-icon">💬</span>
+                    Messages
+                </a>
+                <a href="#settings" class="nav-link" data-page="settings">
+                    <span class="nav-icon">⚙️</span>
+                    Settings
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Navigation -->
+            <header class="top-nav">
+                <div class="top-nav-left">
+                    <button class="sidebar-toggle" id="sidebarToggle">☰</button>
+                    <h1 id="pageTitle">Dashboard</h1>
+                </div>
+                <div class="top-nav-right">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search..." id="searchInput">
+                        <button class="search-btn">🔍</button>
+                    </div>
+                    <button class="dark-mode-toggle" id="darkModeToggle">🌙</button>
+                    <img src="images/profile.png" alt="Profile" class="profile-pic">
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="content-area">
+                <!-- Dashboard Home -->
+                <section id="dashboard" class="page active">
+                    <div class="summary-cards">
+                        <div class="card">
+                            <div class="card-icon">🎵</div>
+                            <div class="card-content">
+                                <h3 id="totalSermons">0</h3>
+                                <p>Total Sermons</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-icon">🙏</div>
+                            <div class="card-content">
+                                <h3 id="prayerRequests">0</h3>
+                                <p>Prayer Requests</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-icon">📅</div>
+                            <div class="card-content">
+                                <h3 id="upcomingEvents">0</h3>
+                                <p>Upcoming Events</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-icon">📚</div>
+                            <div class="card-content">
+                                <h3 id="totalResources">0</h3>
+                                <p>Total Resources</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quick-actions">
+                        <h2>Quick Actions</h2>
+                        <div class="action-buttons">
+                            <button class="action-btn" data-action="upload-sermon">
+                                <span class="btn-icon">🎵</span>
+                                Upload Audio Sermon
+                            </button>
+                            <button class="action-btn" data-action="add-event">
+                                <span class="btn-icon">📅</span>
+                                Add Event
+                            </button>
+                            <button class="action-btn" data-action="upload-pdf">
+                                <span class="btn-icon">📄</span>
+                                Upload PDF
+                            </button>
+                            <button class="action-btn" data-action="add-prayer">
+                                <span class="btn-icon">🙏</span>
+                                Add Prayer Request
+                            </button>
+                            <button class="action-btn" data-action="post-announcement">
+                                <span class="btn-icon">📢</span>
+                                Post Announcement
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Upload Sermon Page -->
+                <section id="upload-sermon" class="page">
+                    <h2>Upload Audio Sermon</h2>
+                    <form id="sermonForm" class="upload-form">
+                        <div class="form-group">
+                            <label for="sermonTitle">Title</label>
+                            <input type="text" id="sermonTitle" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sermonSpeaker">Speaker</label>
+                            <input type="text" id="sermonSpeaker" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sermonTopic">Scripture/Topic</label>
+                            <input type="text" id="sermonTopic" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sermonDescription">Description</label>
+                            <textarea id="sermonDescription" rows="4"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="sermonThumbnail">Thumbnail Image</label>
+                            <input type="file" id="sermonThumbnail" accept="image/*">
+                        </div>
+                        <div class="form-group">
+                            <label for="sermonAudio">Audio File</label>
+                            <div class="upload-box" id="audioUploadBox">
+                                <p>Drag & drop audio file here or click to browse</p>
+                                <p>Supported: MP3, WAV</p>
+                                <input type="file" id="sermonAudio" accept="audio/*" hidden>
+                            </div>
+                        </div>
+                        <button type="submit" class="submit-btn">Upload Sermon</button>
+                    </form>
+                </section>
+
+                <!-- Manage Resources Page -->
+                <section id="manage-resources" class="page">
+                    <h2>Manage Resources</h2>
+                    <form id="resourceForm" class="upload-form">
+                        <div class="form-group">
+                            <label for="resourceTitle">Title</label>
+                            <input type="text" id="resourceTitle" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="resourceCategory">Category</label>
+                            <select id="resourceCategory" required>
+                                <option value="">Select Category</option>
+                                <option value="bible-study">Bible Study</option>
+                                <option value="egw-books">EGW Books</option>
+                                <option value="sda-literature">SDA Literature</option>
+                                <option value="hymns">Hymns</option>
+                                <option value="devotionals">Devotionals</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="resourceDescription">Description</label>
+                            <textarea id="resourceDescription" rows="4"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="resourceFile">File</label>
+                            <div class="upload-box" id="resourceUploadBox">
+                                <p>Drag & drop file here or click to browse</p>
+                                <p>Supported: PDF, DOCX, TXT, Images</p>
+                                <input type="file" id="resourceFile" accept=".pdf,.docx,.txt,image/*" hidden>
+                            </div>
+                        </div>
+                        <button type="submit" class="submit-btn">Upload Resource</button>
+                    </form>
+                    <div class="resources-list" id="resourcesList"></div>
+                </section>
+
+                <!-- Prayer Wall Page -->
+                <section id="prayer-wall" class="page">
+                    <h2>Prayer Wall Management</h2>
+                    <div class="prayer-requests" id="prayerRequestsList"></div>
+                </section>
+
+                <!-- Events Page -->
+                <section id="events" class="page">
+                    <h2>Event Management</h2>
+                    <form id="eventForm" class="upload-form">
+                        <div class="form-group">
+                            <label for="eventTitle">Title</label>
+                            <input type="text" id="eventTitle" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="eventDate">Date</label>
+                            <input type="date" id="eventDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="eventLocation">Location</label>
+                            <input type="text" id="eventLocation" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="eventDescription">Description</label>
+                            <textarea id="eventDescription" rows="4"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="eventPoster">Event Poster</label>
+                            <input type="file" id="eventPoster" accept="image/*">
+                        </div>
+                        <button type="submit" class="submit-btn">Add Event</button>
+                    </form>
+                    <div class="events-list" id="eventsList"></div>
+                </section>
+
+                <!-- Gallery Page -->
+                <section id="gallery" class="page">
+                    <h2>Gallery Management</h2>
+                    <div class="upload-box" id="galleryUploadBox">
+                        <p>Drag & drop images here or click to browse</p>
+                        <input type="file" id="galleryFiles" accept="image/*" multiple hidden>
+                    </div>
+                    <div class="gallery-grid" id="galleryGrid"></div>
+                </section>
+
+                <!-- Donations Page -->
+                <section id="donations" class="page">
+                    <h2>Donation Management</h2>
+                    <form id="donationForm" class="upload-form">
+                        <div class="form-group">
+                            <label for="mtnNumber">MTN Mobile Money</label>
+                            <input type="text" id="mtnNumber" placeholder="+260 XXX XXX XXX">
+                        </div>
+                        <div class="form-group">
+                            <label for="airtelNumber">Airtel Money</label>
+                            <input type="text" id="airtelNumber" placeholder="+260 XXX XXX XXX">
+                        </div>
+                        <div class="form-group">
+                            <label for="bankName">Bank Name</label>
+                            <input type="text" id="bankName">
+                        </div>
+                        <div class="form-group">
+                            <label for="accountNumber">Account Number</label>
+                            <input type="text" id="accountNumber">
+                        </div>
+                        <div class="form-group">
+                            <label for="donationMessage">Donation Message</label>
+                            <textarea id="donationMessage" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Update Donations</button>
+                    </form>
+                </section>
+
+                <!-- Messages Page -->
+                <section id="messages" class="page">
+                    <h2>Messages</h2>
+                    <p>Message management coming soon...</p>
+                </section>
+
+                <!-- Settings Page -->
+                <section id="settings" class="page">
+                    <h2>Settings</h2>
+                    <form id="settingsForm" class="upload-form">
+                        <div class="form-group">
+                            <label for="siteTitle">Website Title</label>
+                            <input type="text" id="siteTitle" value="SDA Hub Connect Zambia">
+                        </div>
+                        <div class="form-group">
+                            <label for="siteLogo">Logo</label>
+                            <input type="file" id="siteLogo" accept="image/*">
+                        </div>
+                        <div class="form-group">
+                            <label for="primaryColor">Primary Color</label>
+                            <input type="color" id="primaryColor" value="#1F3A6F">
+                        </div>
+                        <div class="form-group">
+                            <label for="secondaryColor">Secondary Color</label>
+                            <input type="color" id="secondaryColor" value="#2A7F6E">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Contact Email</label>
+                            <input type="email" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Contact Phone</label>
+                            <input type="tel" id="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="whatsapp">WhatsApp Group Link</label>
+                            <input type="url" id="whatsapp">
+                        </div>
+                        <button type="submit" class="submit-btn">Save Settings</button>
+                    </form>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Notifications -->
+    <div class="notification" id="notification"></div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

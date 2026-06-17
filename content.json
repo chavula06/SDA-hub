@@ -1,0 +1,117 @@
+{
+  "site": {
+    "title": "SDA Hub Connect Zambia",
+    "heroHeadline": "Faith. Community. Growth.",
+    "heroText": "Rooted in Scripture, serving in love, and creating a calm space for reflection, prayer, and fellowship across the SDA community in Kawambwa.",
+    "heroImage": "images/hero-church.svg"
+  },
+  "quickAccess": [
+    {
+      "icon": "images/icons/sermon.svg",
+      "title": "Sermons",
+      "description": "Listen to uplifting messages and teachings for daily spiritual growth."
+    },
+    {
+      "icon": "images/icons/prayer.svg",
+      "title": "Prayer Wall",
+      "description": "Share your requests and pray for one another with confidence."
+    },
+    {
+      "icon": "images/icons/event.svg",
+      "title": "Events",
+      "description": "Stay updated on church programs, meetings, and outreach activities."
+    }
+  ],
+  "sermons": [
+    {
+      "title": "Walking in Faith",
+      "speaker": "Pastor Ephraim Musonda",
+      "date": "June 15, 2026",
+      "summary": "A reflection on trusting God in every season of life.",
+      "image": "images/sermon1.svg",
+      "audio": ""
+    },
+    {
+      "title": "Hope in Difficult Times",
+      "speaker": "Elder Chileshe Mweemba",
+      "date": "June 8, 2026",
+      "summary": "Finding strength and peace through prayer and perseverance.",
+      "image": "images/sermon2.svg",
+      "audio": ""
+    },
+    {
+      "title": "The Power of Community",
+      "speaker": "Pastor Rose Banda",
+      "date": "June 1, 2026",
+      "summary": "How fellowship strengthens faith and encourages service.",
+      "image": "images/sermon3.svg",
+      "audio": ""
+    }
+  ],
+  "prayerRequests": [
+    {
+      "name": "Grace",
+      "text": "Please pray for healing and peace in my family.",
+      "count": 12
+    },
+    {
+      "name": "Anonymous",
+      "text": "Pray for wisdom, guidance, and strength in my daily work.",
+      "count": 7
+    }
+  ],
+  "events": [
+    {
+      "title": "Midweek Prayer Meeting",
+      "date": "Wednesday, 7:00 PM",
+      "location": "Church Hall",
+      "description": "Come and join us for fellowship, prayer, and Scripture meditation."
+    },
+    {
+      "title": "Community Outreach",
+      "date": "Saturday, 9:00 AM",
+      "location": "Kawambwa Town Center",
+      "description": "A day of service, encouragement, and practical support for families."
+    }
+  ],
+  "resources": [
+    {
+      "category": "Bible Study",
+      "items": [
+        "Daily Devotionals",
+        "Bible Reading Plans",
+        "Study Guides"
+      ]
+    },
+    {
+      "category": "Music",
+      "items": [
+        "Hymn Book",
+        "Choir Rehearsal Notes",
+        "Worship Playlists"
+      ]
+    },
+    {
+      "category": "Ministry",
+      "items": [
+        "Youth Resources",
+        "Children's Lessons",
+        "Prayer Materials"
+      ]
+    }
+  ],
+  "donation": {
+    "mtn": "0971081002",
+    "airtel": "0964371066",
+    "bank": {
+      "name": "Zanaco",
+      "account": "Account details will be shared on request"
+    }
+  },
+  "contact": {
+    "email": "ephraimmusonda450@gmail.com",
+    "phone": "0971081002",
+    "whatsapp": "0971081002",
+    "location": "Kawambwa, Zambia"
+  }
+}
